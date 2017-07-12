@@ -1,4 +1,5 @@
 # Site settings
+theme: minimal-mistakes-jekyll
 title: "Knowledge base"
 description: > # this means to ignore newlines until "baseurl:"
   Juste another knowledge blog from a freelancer
