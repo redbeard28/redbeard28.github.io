@@ -24,6 +24,13 @@ defaults:
     values:
         layout: 'post'
 
+# Tipue search settings
+tipue_search:
+  include:
+    pages: true
+  exclude:
+    files: [search.html]
+    
 # Build settings
 destination: _site
 paginate: 10
