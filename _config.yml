@@ -20,29 +20,42 @@ description: > # this means to ignore newlines until "baseurl:"
   like smarthome fibaro, domoticz and arduino, sparkfun, adafruit tutorials.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://redbeard28.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
 timezone: Europe/Paris
 
 # Build settings
+#markdown: kramdown
+#theme: minima
+#gems:
+#  - jekyll-feed
+###############################################################################
+author:
+  name: 'Jérémie CUADRADO'
+  email: jcuadrado@redbeard-consulting.fr
+  twitter_username: redbeard28
+  facebook_username: redbeard28
+  github_username:  redbeard28
+  linkedin_username:  jeremie_cuadrado
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
 markdown: kramdown
-theme: minima
-gems:
-  - jekyll-feed
+highlighter: rouge
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
- exclude:
-#   - Gemfile
-#   - Gemfile.lock
-   - node_modules
-   - vendor/bundle/
-   - vendor/cache/
-   - vendor/gems/
-   - vendor/ruby/
-   - .git/
-   - .gitignore
-   - .c9/
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
 
-paginate: 5
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
