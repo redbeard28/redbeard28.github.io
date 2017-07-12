@@ -3,6 +3,7 @@ title: "Knowledge base from a Geek"
 description: > # this means to ignore newlines until "baseurl:"
   My personal tutorials about containers with docker, cloud infrastructure with AWS azure and openstack. Somes extras about my passions
   like smarthome fibaro, domoticz and arduino, sparkfun, adafruit tutorials.
+email: blog@redbeard-consulting.fr
 url: 'https://redbeard28.github.io/'
 baseurl: '/'
 # google_analytics: 'UA-XXXXXX-X'
@@ -10,7 +11,7 @@ disqus_shortname: 'redbeard28'
 
 author:
   name: 'Jérémie CUADRADO'
-  email: jcuadrado@redbeard-consulting.fr
+#  email: jcuadrado@redbeard-consulting.fr
   twitter_username: redbeard28
 #  facebook_username: 
   github_username:  redbeard28
