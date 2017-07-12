@@ -8,9 +8,11 @@ tipue_search_active: true
 This time, we see howto create an custom iso of CentOS.
 
 Create a directory to mount your source.
-```bash
+
+{% highlight bash %}
 mkdir /tmp/bootiso.
-```
+{% endhighlight %}
+
 
 Loop mount the source ISO you are modifying. (Download from Red Hat / CentOS.)
 ```bash
