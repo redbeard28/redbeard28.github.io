@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
 url: 'https://redbeard28.github.io/'
 baseurl: '/'
 # google_analytics: 'UA-XXXXXX-X'
-# disqus_shortname: 'your-disqus-name'
+disqus_shortname: 'redbeard28'
 
 author:
   name: 'Jérémie CUADRADO'
