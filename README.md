@@ -1,3 +1,13 @@
+{%  for post in paginator.posts %}
+  <h1><a href="">{{ post.title }}</a></h1>
+  <p class="author">
+    <span class="date">{{  post.date }}</span>
+  </p>
+  <div class="content">
+    {{  post.content }}
+  </div>
+{%  endfor %}
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/redbeard28/redbeard28.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
