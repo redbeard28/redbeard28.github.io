@@ -3,6 +3,7 @@ title:  "Welcome to my blog!"
 date:   2017-07-12 15:00:23
 categories: [home]
 tags: [home,welcome]
+tipue_search_active: true
 ---
 This is a test.
 
