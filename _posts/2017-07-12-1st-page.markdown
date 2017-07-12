@@ -8,4 +8,4 @@ Hello, this is my first page.
 
 
 [github-repo]: https://github.com/redbeard28
-[Linkedin]:   https://linkedin.com/jeremie_cuadrado
+[Linkedin]: https://linkedin.com/jeremie_cuadrado
