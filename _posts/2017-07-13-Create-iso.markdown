@@ -9,57 +9,52 @@ This time, we see howto create an custom iso of CentOS.
 
 Create a directory to mount your source.
 
-{% highlight bash %}
+{% highlight shell %}
 mkdir /mnt/bootiso
 {% endhighlight %}
 
 <pre class="prettyprint">
 mkdir /mnt/bootiso
-# This is a comments
-for i in too
- do
-   echo $toto
- done
 </pre>
 
 Loop mount the source ISO you are modifying. (Download from Red Hat / CentOS.)
-```bash
+</pre>
 mount -o loop /path/to/some.iso /mnt/bootiso
-```
+</pre>
 
 Create a working directory for your customized media.
-```bash
+</pre>
 mkdir /mnt/bootisoks
-```
+</pre>
 
 Copy the source media to the working directory.
-```bash
+</pre>
 rsync -av --progress /mnt/bootiso/* /mnt/bootisoks/
-```
+</pre>
 
 Unmount the source ISO and remove the directory.
-```bash
+</pre>
 umount /mnt/bootiso && rmdir /mnt/bootiso
-```
+</pre>
 
 Change permissions on the working directory.
-```bash
+</pre>
 chmod -R u+w /mnt/bootisoks
-```
+</pre>
 
 Copy your Kickstart script which has been modified for the packages and %post to the working directory.
-```bash
+</pre>
 cp /path/to/someks.cfg /mnt/bootisoks/isolinux/ks.cfg
-```
+</pre>
 
 Copy any additional RPMs to the directory structure and update the metadata.
-```bash
+</pre>
 cp /path/to/*.rpm /mnt/bootisoks/Packages/
 cd /mnt/bootisoks/Packages && createrepo -dpo .. .
-```
+</pre>
 
 Add kickstart to boot options.
-```bash
+</pre>
 echo "default vesamenu.c32
 #prompt 1
 timeout 600
@@ -104,9 +99,9 @@ label memtest86
   append -
 
 " > /mnt/bootisoks/isolinux/isolinux.cfg
-```
+</pre>
 
 Create the new ISO file.
-```bash
+</pre>
 cd /mnt/bootisoks && mkisofs -o /mnt/boot.iso -b isolinux.bin -c boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -R -J -v -T isolinux/. .
-```
+</pre>
