@@ -18,43 +18,43 @@ mkdir /mnt/bootiso
 </pre>
 
 Loop mount the source ISO you are modifying. (Download from Red Hat / CentOS.)
-</pre>
+<pre class="prettyprint">
 mount -o loop /path/to/some.iso /mnt/bootiso
 </pre>
 
 Create a working directory for your customized media.
-</pre>
+<pre class="prettyprint">
 mkdir /mnt/bootisoks
 </pre>
 
 Copy the source media to the working directory.
-</pre>
+<pre class="prettyprint">
 rsync -av --progress /mnt/bootiso/* /mnt/bootisoks/
 </pre>
 
 Unmount the source ISO and remove the directory.
-</pre>
+<pre class="prettyprint">
 umount /mnt/bootiso && rmdir /mnt/bootiso
 </pre>
 
 Change permissions on the working directory.
-</pre>
+<pre class="prettyprint">
 chmod -R u+w /mnt/bootisoks
 </pre>
 
 Copy your Kickstart script which has been modified for the packages and %post to the working directory.
-</pre>
+<pre class="prettyprint">
 cp /path/to/someks.cfg /mnt/bootisoks/isolinux/ks.cfg
 </pre>
 
 Copy any additional RPMs to the directory structure and update the metadata.
-</pre>
+<pre class="prettyprint">
 cp /path/to/*.rpm /mnt/bootisoks/Packages/
 cd /mnt/bootisoks/Packages && createrepo -dpo .. .
 </pre>
 
 Add kickstart to boot options.
-</pre>
+<pre class="prettyprint">
 echo "default vesamenu.c32
 #prompt 1
 timeout 600
@@ -102,6 +102,6 @@ label memtest86
 </pre>
 
 Create the new ISO file.
-</pre>
+<pre class="prettyprint">
 cd /mnt/bootisoks && mkisofs -o /mnt/boot.iso -b isolinux.bin -c boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -R -J -v -T isolinux/. .
 </pre>
