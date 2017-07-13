@@ -10,7 +10,7 @@ This time, we see howto create an custom iso of CentOS.
 Create a directory to mount your source.
 
 {% highlight bash %}
-mkdir /tmp/bootiso.
+mkdir /tmp/bootiso
 {% endhighlight %}
 
 
