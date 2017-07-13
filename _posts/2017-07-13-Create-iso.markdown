@@ -13,14 +13,14 @@ Create a directory to mount your source.
 mkdir /mnt/bootiso
 {% endhighlight %}
 
-<pre class="prettyprint lang-bash">
+<pre class="prettyprint lang-bash"><span class="desert">
 mkdir /mnt/bootiso
 # This is a comments
 for i in too
  do
    echo $toto
  done
-</pre>
+</span></pre>
 
 Loop mount the source ISO you are modifying. (Download from Red Hat / CentOS.)
 ```bash
@@ -60,7 +60,50 @@ cd /mnt/bootisoks/Packages && createrepo -dpo .. .
 
 Add kickstart to boot options.
 ```bash
-sed -i 's/append\ initrd\=initrd.img$/append initrd=initrd.img\ ks\=cdrom:\/ks.cfg/' /mnt/bootisoks/isolinux/isolinux.cfg
+echo "default vesamenu.c32
+#prompt 1
+timeout 600
+
+display boot.msg
+
+menu background splash.jpg
+menu title Welcome to Red Hat Enterprise Linux 6.8!
+menu color border 0 #ffffffff #00000000
+menu color sel 7 #ffffffff #ff000000
+menu color title 0 #ffffffff #00000000
+menu color tabmsg 0 #ffffffff #00000000
+menu color unsel 0 #ffffffff #00000000
+menu color hotsel 0 #ff000000 #ffffffff
+menu color hotkey 7 #ffffffff #ff000000
+menu color scrollbar 0 #ffffffff #00000000
+
+label Kickstart
+  menu label ^Install RHEL6.8
+  menu default
+  kernel vmlinuz
+  append initrd=initrd.img ks=cdrom:/ks.cfg bond=bond0:eth0,eth1:mode=802.3ad,miimon=100,lacp_rate=fast vlan=bond0.474:bond0
+label linux
+  menu label ^Install or upgrade an existing system
+  menu default
+  kernel vmlinuz
+  append initrd=initrd.img
+label vesa
+  menu label Install system with ^basic video driver
+  kernel vmlinuz
+  append initrd=initrd.img nomodeset
+label rescue
+  menu label ^Rescue installed system
+  kernel vmlinuz
+  append initrd=initrd.img rescue
+label local
+  menu label Boot from ^local drive
+  localboot 0xffff
+label memtest86
+  menu label ^Memory test
+  kernel memtest
+  append -
+
+" > /mnt/bootisoks/isolinux/isolinux.cfg
 ```
 
 Create the new ISO file.
