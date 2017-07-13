@@ -103,3 +103,27 @@ void loop() {
 
 ## Source and credits
 All the credit of this page is for [henrysbench site](http://henrysbench.capnfatz.com/henrys-bench/arduino-projects-tips-and-more/arduino-esp8266-lolin-nodemcu-getting-started/)
+
+## Erreur typique
+
+Voici une erreur typique lors de votre compilation:
+<pre class="prettyprint">
+(plateforme esp8266, package esp8266) est inconnue
+</pre>
+
+**Solution:**
+This problem is caused by a package update not completely removing the previous version. Likely you have two version folders of the esp8266 core on your computer. For example:
+
+C:\Users\Eric\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.3.0
+
+and
+
+C:\Users\Eric\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.2.0
+
+So you need to delete the old version folder, in this example it would be:
+
+C:\Users\Eric\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.2.0
+
+Then restart the Arduino IDE and see if it will work.
+
+Solution proposed by pert user on this [site](https://forum.arduino.cc/index.php?topic=430161.msg2965412#msg2965412)
