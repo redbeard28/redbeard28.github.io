@@ -13,14 +13,14 @@ Create a directory to mount your source.
 mkdir /mnt/bootiso
 {% endhighlight %}
 
-<pre class="prettyprint lang-bash"><span class="desert">
+<pre class="prettyprint">
 mkdir /mnt/bootiso
 # This is a comments
 for i in too
  do
    echo $toto
  done
-</span></pre>
+</pre>
 
 Loop mount the source ISO you are modifying. (Download from Red Hat / CentOS.)
 ```bash
