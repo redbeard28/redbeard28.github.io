@@ -102,4 +102,4 @@ void loop() {
 </pre>
 
 ## Source and credits
-All the credit of this page is for ![henrysbench site](http://henrysbench.capnfatz.com/henrys-bench/arduino-projects-tips-and-more/arduino-esp8266-lolin-nodemcu-getting-started/)
+All the credit of this page is for [henrysbench site](http://henrysbench.capnfatz.com/henrys-bench/arduino-projects-tips-and-more/arduino-esp8266-lolin-nodemcu-getting-started/)
