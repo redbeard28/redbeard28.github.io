@@ -27,20 +27,20 @@ Ajoutez l'URL ***http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
 
 ## Board Manager
-Veuillez vous diriger versvers le Board Manager (Gestionnaire de carte)
+Veuillez vous diriger vers le Board Manager (Gestionnaire de carte)
 ![Gestionnaire de Carte](https://i2.wp.com/henrysbench.capnfatz.com/wp-content/uploads/2016/09/SelectBoardManager.png?w=696)
 
 ## Installer les fichiers de la Bibliothèque ESP8266
 Sélectionnez sketch *![Install ESP8266 Files](https://i0.wp.com/henrysbench.capnfatz.com/wp-content/uploads/2016/09/InstallESP8266Files.png?resize=768%2C514)
 
+## Veuillez connecter votre carte
+Veuillez connecter la carte au port USB de votre PC. Si la carte n'est pas repérée par le système, veuillez installer les driver **CH340** 
+![Connexion LOLIN](https://i0.wp.com/henrysbench.capnfatz.com/wp-content/uploads/2016/09/Connect-to-Computer.png?resize=768%2C569)
+
 
 ## Sélectionnez la carte
 Veuillez sélectionner la carte NodeMCU 1.0 dans la gestion des cartes
 ![NodeMCU Board(https://i0.wp.com/henrysbench.capnfatz.com/wp-content/uploads/2016/09/ChooseNodeMCUBoard.png?w=675)
-
-## Veuillez connecter votre carte
-Veuillez connecter la carte au port USB de votre PC. Si la carte n'est pas repérée par le système, veuillez installer les driver **CH340** 
-![Connexion LOLIN](https://i0.wp.com/henrysbench.capnfatz.com/wp-content/uploads/2016/09/Connect-to-Computer.png?resize=768%2C569)
 
 
 ## Paramétrage communications Cartes
@@ -53,6 +53,11 @@ Copiez les programme suivant dans l'Arduino IDE, compilez transférez.
 Ce programme permettra de scanner le wifi et de vous afficher dans le monitor serial les réseau wifi disponible autour de vous.
 
 <pre class="prettyprint">
+# ################################################################# #
+#     ESP8266.COM                                                   #
+#   The sketch is one that comes as an example from ESP8266.COM     #
+# ################################################################# #
+
 #include "ESP8266WiFi.h"
 
 void setup() {
