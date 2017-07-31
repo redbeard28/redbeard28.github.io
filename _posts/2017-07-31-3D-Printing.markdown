@@ -1,0 +1,30 @@
+---
+title:  "3D Printing: Some links for tips and learn"
+date:   2017-07-31 21:11:00
+categories: [Linux]
+tags: [3D printer,DYI,learn]
+tipue_search_active: true
+---
+
+In this page I try to put the most importants information concerning 3D printers.
+
+** What is 3D printers (French version)
+(BarbuXpérience)[https://youtu.be/c1x0lttiPk0]
+
+** Howto: Choose your printer (Franch verison)
+(BarbuXpérience)[https://youtu.be/PWPV_qSEZDA]
+
+
+** Howto: Choose your PLA/ABS filament (French version)
+(BarbuXpérience)[https://youtu.be/ml2bpui9vA4]
+
+
+** Tips & Tricks for better printer
+This guy give good tips to avoid pain in the ass printing problems.
+
+    Resume: Learning how to use FDM 3D Printers can be tricky enough without having these problems happen to you. In this video we discuss 5 of the biggest mistakes people make in 3D Printing, and how to avoid them.
+    
+(Youtube link - Maker's Muse)[https://youtu.be/aWg1nG2AbA8]
+
+
+    Other links will come...

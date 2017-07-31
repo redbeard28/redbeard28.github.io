@@ -46,6 +46,7 @@ Les certificats proposés par Let's Encrypt sont valables pour une durée de 90 
 Une âme charitable a pensé à nous. En effet, un script bash a été partagé par **Erika Heidi** afin de le lancer automatiquement via la crontab.
 
 <pre class="prettyprint">
+sudo install -y bc
 sudo curl -L -o /usr/local/sbin/le-renew http://do.co/le-renew
 sudo chmod +x /usr/local/sbin/le-renew
 
