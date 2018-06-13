@@ -1,5 +1,6 @@
 ---
 title:  "Welcome to my blog!"
+layout: default
 date:   '2017-07-12 12:52:23'
 tags: [home, welcome]
 ---
