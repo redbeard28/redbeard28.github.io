@@ -1,8 +1,8 @@
 ---
 title:  "Welcome to my blog!"
-date:   2017-07-12 12:52:23
+date:   '2017-07-12 12:52:23'
 categories: [home]
-tags: [home,welcome]
+tags: [home, welcome]
 tipue_search_active: true
 ---
 My personal tutorials about containers with docker, cloud infrastructure with AWS azure and openstack.
