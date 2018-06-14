@@ -3,7 +3,7 @@ title:  "3D Printing: Some links for tips and learn"
 date:   2017-07-31 21:11:00
 categories: [Linux]
 tags: [3D printer,DYI,learn]
-tipue_search_active: true
+tipue_search_active: false
 ---
 
 In this page I try to put the most importants information concerning 3D printers.

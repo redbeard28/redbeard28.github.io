@@ -12,14 +12,14 @@ author:
   name: 'Jérémie CUADRADO'
 #  email: jcuadrado@redbeard-consulting.fr
   twitter_username: redbeardjcu
-#  facebook_username: 
+  facebook_username: 3dfabricfr
   github_username:  redbeard28
   linkedin_username:  jeremiecuadrado
 
 defaults:
   -
     scope:
-      path: ''
+      path: '/'
       type: 'posts'
     values:
         layout: 'post'
